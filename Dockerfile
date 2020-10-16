@@ -11,5 +11,5 @@ RUN mvn -f /home/app/pom.xml clean package
 #
 FROM openjdk:8-jre-slim
 COPY --from=build /home/app/target/team-0.1.jar /usr/local/lib/team-0.1.jar
-EXPOSE 8080
+EXPOSE 8084
 ENTRYPOINT ["java","-jar","/usr/local/lib/team-0.1.jar"]
